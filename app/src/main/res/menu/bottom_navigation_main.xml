@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_news"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_name"
+        android:title="News"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_multimedia"
+        android:enabled="true"
+        android:icon="@drawable/ic_multimedia"
+        android:title="News"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_barcode"
+        android:enabled="true"
+        android:icon="@drawable/ic_barcode"
+        android:title="News"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings"
+        android:title="News"
+        app:showAsAction="ifRoom"/>
+
+</menu>
