@@ -28,7 +28,7 @@
             android:layout_below="@+id/news_image"
             android:maxLines="3"
             android:padding="8dp"
-            android:text="Curan el cancer"
+            android:text="Titulo"
             android:textColor="#FFFFFF"
             android:textSize="22dp"
             android:textStyle="bold" />
@@ -40,7 +40,7 @@
             android:layout_below="@+id/news_title"
             android:maxLines="3"
             android:padding="8dp"
-            android:text="En Mi pito te damos mas!"
+            android:text="Hola Boundless!"
             android:textColor="#848484"
             android:textSize="14dp" />
 
