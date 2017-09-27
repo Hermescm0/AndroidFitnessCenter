@@ -60,7 +60,8 @@ public class NewsController extends AppCompatActivity {
             ImageView imageView = (ImageView) view.findViewById(R.id.news_image);
             TextView textView_title = (TextView) view.findViewById(R.id.news_title);
 
-            textView_title.getBackground().setAlpha(100); // int value between 0 and 255
+            TextView textBackground = (TextView) view.findViewById(R.id.text_background);
+            textBackground.getBackground().setAlpha(60);
 
             imageView.setImageResource(news.get(i).image);
             textView_title.setText(news.get(i).title);

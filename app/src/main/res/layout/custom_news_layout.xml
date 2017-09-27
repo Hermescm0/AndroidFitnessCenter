@@ -21,6 +21,24 @@
             android:src="@drawable/ic_news" />
 
         <TextView
+            android:id="@+id/text_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:padding="10dp"
+            android:gravity="bottom"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:background="#000000"
+
+
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
             android:id="@+id/news_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +47,6 @@
             android:gravity="bottom"
             android:text="Titulo"
             android:textColor="#FFFFFF"
-            android:background="#000000"
 
 
             android:textSize="30dp"
