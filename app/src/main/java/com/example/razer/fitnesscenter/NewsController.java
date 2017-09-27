@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
-public class NewsCreator extends AppCompatActivity {
+public class NewsController extends AppCompatActivity {
     int[] IMAGES = {R.drawable.guy, R.drawable.guy, R.drawable.guy, R.drawable.guy};
     String[] NAMES = {"Noticia", "Noticia2", "Noticia", "Noticia2"};
     String[] DESCRIPTIONS = {"Que hermosa noticia", "holis", "Noticia", "Noticia2"};

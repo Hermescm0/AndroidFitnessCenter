@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class RegisterCreator extends AppCompatActivity {
+public class RegisterController extends AppCompatActivity {
     Button validate;
     EditText email, password;
 
@@ -53,7 +53,7 @@ public class RegisterCreator extends AppCompatActivity {
         } else {
             Intent intent = new Intent(this, MainController.class);
             startActivity(intent);
-            Toast.makeText(RegisterCreator.this, "Your account has been created", Toast.LENGTH_LONG).show();
+            Toast.makeText(RegisterController.this, "Your account has been created", Toast.LENGTH_LONG).show();
         }
 
     }

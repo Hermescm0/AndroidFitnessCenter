@@ -27,7 +27,7 @@ public class MainController extends AppCompatActivity {
         register.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent MyIntent = new Intent(MainController.this, RegisterCreator.class);
+                Intent MyIntent = new Intent(MainController.this, RegisterController.class);
                 startActivity(MyIntent);
             }
         });
@@ -38,7 +38,7 @@ public class MainController extends AppCompatActivity {
         login.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent MyIntent = new Intent(MainController.this, NewsCreator.class);
+                Intent MyIntent = new Intent(MainController.this, NewsController.class);
                 startActivity(MyIntent);
             }
         });

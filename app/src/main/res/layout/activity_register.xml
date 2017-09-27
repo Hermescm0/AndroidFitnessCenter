@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/guy"
     android:orientation="vertical"
-    tools:context=".RegisterCreator">
+    tools:context=".RegisterController">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
