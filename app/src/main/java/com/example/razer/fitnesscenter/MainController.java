@@ -19,25 +19,6 @@ public class MainController extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         btnLogin = (Button) findViewById(R.id.menu_button_login);
-        btnLogin.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf"));
-        btnRegister = (Button) findViewById(R.id.menu_button_register);
-
-    }
-
-//Abre Register Activity
-    public void openRegister(View view) {
-
-        btnRegister.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent MyIntent = new Intent(MainController.this, RegisterController.class);
-                startActivity(MyIntent);
-            }
-        });
-
-    }
-
-    public void openNews(View view) {
         btnLogin.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +27,16 @@ public class MainController extends AppCompatActivity {
             }
         });
 
+        btnRegister = (Button) findViewById(R.id.menu_button_register);
+
+        btnRegister.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent MyIntent = new Intent(MainController.this, RegisterController.class);
+                startActivity(MyIntent);
+            }
+        });
     }
+
 
 }
