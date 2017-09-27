@@ -11,16 +11,22 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class NewsController extends AppCompatActivity {
-    int[] IMAGES = {R.drawable.guy, R.drawable.guy, R.drawable.guy, R.drawable.guy};
-    String[] NAMES = {"Noticia", "Noticia2", "Noticia", "Noticia2"};
-    String[] DESCRIPTIONS = {"Que hermosa noticia", "holis", "Noticia", "Noticia2"};
+
+    ArrayList<NewsModel> news = new ArrayList<NewsModel>();
+
     ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Agrega una noticia
+        news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.guy));
+
+
         setContentView(R.layout.activity_news);
 
         listView = (ListView) findViewById(R.id.news_list);
@@ -32,7 +38,7 @@ public class NewsController extends AppCompatActivity {
     class CustomAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return IMAGES.length;
+            return news.size();
         }
 
         @Override
@@ -52,9 +58,9 @@ public class NewsController extends AppCompatActivity {
             TextView textView_title = (TextView) view.findViewById(R.id.news_title);
             TextView textView_description = (TextView) view.findViewById(R.id.news_description);
 
-            imageView.setImageResource(IMAGES[i]);
-            textView_title.setText(NAMES[i]);
-            textView_description.setText(DESCRIPTIONS[i]);
+            imageView.setImageResource(news.get(i).image);
+            textView_title.setText(news.get(i).title);
+            textView_description.setText(news.get(i).content);
 
 
             return view;
