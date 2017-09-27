@@ -32,7 +32,7 @@
             android:background="#000000"
 
 
-            android:textSize="30dp"
+            android:textSize="22dp"
             android:textStyle="bold"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
@@ -46,11 +46,9 @@
             android:padding="10dp"
             android:gravity="bottom"
             android:text="Titulo"
+            android:fontFamily="@font/Roboto-Thin"
             android:textColor="#FFFFFF"
-
-
-            android:textSize="30dp"
-            android:textStyle="bold"
+            android:textSize="22dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true" />
