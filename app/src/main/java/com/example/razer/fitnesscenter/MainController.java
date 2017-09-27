@@ -22,7 +22,7 @@ public class MainController extends AppCompatActivity {
 
     }
 
-
+//Abre Register Activity
     public void openRegister(View view) {
         register.setOnClickListener(new OnClickListener() {
             @Override
