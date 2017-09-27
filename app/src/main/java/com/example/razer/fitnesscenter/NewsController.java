@@ -24,7 +24,10 @@ public class NewsController extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Agrega una noticia
+        news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.ic_news));
         news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.guy));
+        news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.guy));
+        news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.ic_news));
 
 
         setContentView(R.layout.activity_news);
@@ -56,11 +59,12 @@ public class NewsController extends AppCompatActivity {
             view = getLayoutInflater().inflate(R.layout.custom_news_layout, null);
             ImageView imageView = (ImageView) view.findViewById(R.id.news_image);
             TextView textView_title = (TextView) view.findViewById(R.id.news_title);
-            TextView textView_description = (TextView) view.findViewById(R.id.news_description);
+
+            textView_title.getBackground().setAlpha(100); // int value between 0 and 255
 
             imageView.setImageResource(news.get(i).image);
             textView_title.setText(news.get(i).title);
-            textView_description.setText(news.get(i).content);
+
 
 
             return view;
