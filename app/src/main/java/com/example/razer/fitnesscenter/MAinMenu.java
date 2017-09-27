@@ -25,9 +25,9 @@ public class MAinMenu extends AppCompatActivity {
 //        final EditText email = (EditText) findViewById(R.id.text_input_edit_email);
 //        final EditText password = (EditText) findViewById(R.id.text_input_edit_password);
 //        final Button validate = (Button) findViewById(R.id.appCompatButtonRegister);
-//        final TextView register = (TextView) findViewById(R.id.textViewLinkRegister);
+//        final TextView RegisterController = (TextView) findViewById(R.id.textViewLinkRegister);
 //
-//        register.setOnClickListener(new View.OnClickListener() {
+//        RegisterController.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                setContentView(R.layout.activity_register);
