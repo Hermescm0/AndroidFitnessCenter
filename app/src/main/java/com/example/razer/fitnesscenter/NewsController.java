@@ -25,9 +25,9 @@ public class NewsController extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Agrega una noticia
-        news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.ic_news));
-        news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.guy));
-        news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.guy));
+        news.add(new NewsModel("Bienvenido a Boundless", "Que hermosa noticia", R.drawable.ic_news));
+        news.add(new NewsModel("Noticia de prueba", "Que hermosa noticia", R.drawable.guy));
+        news.add(new NewsModel("Usando Roboto Thin", "Que hermosa noticia", R.drawable.guy));
         news.add(new NewsModel("Noticia", "Que hermosa noticia", R.drawable.ic_news));
 
 
@@ -68,8 +68,6 @@ public class NewsController extends AppCompatActivity {
 
             imageView.setImageResource(news.get(i).image);
             textView_title.setText(news.get(i).title);
-
-
 
             return view;
 
