@@ -1,5 +1,6 @@
 package com.example.razer.fitnesscenter;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -59,6 +60,8 @@ public class NewsController extends AppCompatActivity {
             view = getLayoutInflater().inflate(R.layout.custom_news_layout, null);
             ImageView imageView = (ImageView) view.findViewById(R.id.news_image);
             TextView textView_title = (TextView) view.findViewById(R.id.news_title);
+            Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
+            textView_title.setTypeface(myFont);
 
             TextView textBackground = (TextView) view.findViewById(R.id.text_background);
             textBackground.getBackground().setAlpha(60);
