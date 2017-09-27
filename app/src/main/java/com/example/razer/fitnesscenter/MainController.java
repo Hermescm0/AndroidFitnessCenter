@@ -1,6 +1,7 @@
 package com.example.razer.fitnesscenter;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,12 +19,14 @@ public class MainController extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         btnLogin = (Button) findViewById(R.id.menu_button_login);
+        btnLogin.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf"));
         btnRegister = (Button) findViewById(R.id.menu_button_register);
 
     }
 
 //Abre Register Activity
     public void openRegister(View view) {
+
         btnRegister.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

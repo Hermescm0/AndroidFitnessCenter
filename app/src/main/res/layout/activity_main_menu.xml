@@ -59,9 +59,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="@color/colorTextHint"
+            android:background="#F37223"
             android:onClick="openNews"
             android:text="@string/text_login"
+            android:bottomRightRadius="20dp"
+            android:bottomLeftRadius="20dp"
+            android:topLeftRadius="200dp"
+            android:topRightRadius="20dp"
             android:textColor="@color/colorText" />
 
         <android.support.v7.widget.AppCompatButton
