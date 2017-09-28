@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterController" />
+        <activity android:name=".BarcodeController" />
         <activity android:name=".NewsController" />
     </application>
 
