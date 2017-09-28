@@ -4,11 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/appicon"
+        android:icon="@mipmap/icono_android"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/appicon"
+        android:roundIcon="@mipmap/icono_android"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MainController">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +18,12 @@
         </activity>
         <activity android:name=".RegisterController" />
         <activity android:name=".NewsController" />
+        <activity android:name=".BarcodeController" />
+        <activity android:name=".NewsSingleController"
+            android:parentActivityName=".NewsController">
+        </activity>
     </application>
 
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

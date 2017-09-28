@@ -8,11 +8,11 @@ public class NewsModel {
 
     public String title;
     public String content;
-    public int image;
+    public String imageURL;
 
-    public NewsModel(String t, String c, int url){
+    public NewsModel(String t, String c, String url){
         this.title = t;
         this.content = c;
-        this.image = url;
+        this.imageURL = url;
     }
 }
