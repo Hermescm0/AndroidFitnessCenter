@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Boundless</string>
-    <item name="visible" type="id"/>
-    <item name="masked" type="id"/>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
     <string name="hint_name">Name</string>
     <string name="hint_last_name">Last Name</string>
     <string name="hint_phone_number">Phone (Optional)</string>
@@ -20,5 +20,11 @@
     <string name="error_email_exists">Email already exists</string>
     <string name="error_password_match">Password does not matches</string>
     <string name="error_valid_password">Wrong email or password</string>
+    <string name="title_activity_barcode_controller_test">BarcodeControllerTest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>

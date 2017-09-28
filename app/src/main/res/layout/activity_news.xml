@@ -9,6 +9,8 @@
     android:orientation="vertical"
     tools:context=".MainController">
 
+
+
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/news_logo"
         android:layout_width="match_parent"
