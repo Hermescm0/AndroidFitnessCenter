@@ -34,10 +34,10 @@ public class NewsController extends AppCompatActivity{
         setContentView(R.layout.activity_news);
 
         // Agrega una noticia
-        news.add(new NewsModel("Miles de estudiantes estarán presentes este evento 2016", "Esta es una prueba de la primera noticia. Todo va saliendo bien. Mas palabras para que se vea mas contenido.", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg"));
-        news.add(new NewsModel("Excelente evento", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg"));
-        news.add(new NewsModel("Usando Roboto Thin", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg"));
-        news.add(new NewsModel("Noticia", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg"));
+        news.add(new NewsModel("Miles de estudiantes estarán presentes este evento 2016", "Esta es una prueba de la primera noticia. Todo va saliendo bien. Mas palabras para que se vea mas contenido.", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
+        news.add(new NewsModel("Excelente evento", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
+        news.add(new NewsModel("Usando Roboto Thin", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
+        news.add(new NewsModel("Noticia", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
 
 
 

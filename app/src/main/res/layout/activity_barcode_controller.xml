@@ -8,21 +8,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#010101"
-    tools:context=".NewsController">
+    tools:context="com.example.razer.fitnesscenter.BarcodeController">
 
+    <android.support.design.widget.BottomNavigationView
 
-    <android.support.v7.widget.ListViewCompat
-        android:id="@+id/news_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:id="@+id/navigation"
+        app:menu="@menu/bottom_navigation_main"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
 
-    </android.support.v7.widget.ListViewCompat>
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ></android.support.v7.widget.Toolbar>
+    </android.support.design.widget.BottomNavigationView>
+
+
+
+
 
 </RelativeLayout>
+
+
+
+
+
+
