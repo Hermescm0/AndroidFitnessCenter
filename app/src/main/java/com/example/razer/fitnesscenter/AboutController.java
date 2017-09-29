@@ -13,6 +13,14 @@ public class AboutController extends AppCompatActivity {
 
     Button signOut, privacy, support;
 
+
+    //Makes sure when u press back show settings
+    @Override
+    protected void onResume() {
+        super.onResume();
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.itemSettings);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

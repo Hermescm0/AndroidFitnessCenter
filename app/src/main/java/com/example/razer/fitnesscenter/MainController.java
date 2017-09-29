@@ -22,7 +22,7 @@ public class MainController extends AppCompatActivity {
         btnLogin.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent MyIntent = new Intent(MainController.this, NewsController.class);
+                Intent MyIntent = new Intent(MainController.this, VideoController.class);
                 startActivity(MyIntent);
                 finish(); //Block back button
 

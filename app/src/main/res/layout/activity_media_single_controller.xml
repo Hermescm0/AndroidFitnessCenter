@@ -1,0 +1,148 @@
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#010101">
+
+
+        <VideoView
+            android:id="@+id/single_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/single_video_view"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="September 25th, 2017"
+            android:textColor="#969696" />
+
+        <TextView
+            android:id="@+id/single_media_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dateView"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Title"
+            android:textColor="#F37223"
+            android:textSize="30dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/single_media_title"
+
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/single_media_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/single_media_title"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="CONTENT"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--<TextView-->
+        <!--android:id="@+id/single_media_title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:maxLines="3"-->
+        <!--android:padding="8dp"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="22dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_below="@+id/single_video_view"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/single_media_description"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/single_media_title"-->
+        <!--android:maxLines="3"-->
+        <!--android:padding="8dp"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="14dp"-->
+        <!--android:layout_toEndOf="@+id/single_media_title" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/button_singlee"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/single_video_view"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:text="Button" />-->
+
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<com.ms.square.android.expandabletextview.ExpandableTextView-->
+        <!--android:id="@+id/expandable_text_view"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--app:maxCollapsedLines="4"-->
+        <!--app:animDuration="200"-->
+        <!--android:weightSum="1">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/expandable_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:textSize="22dp"-->
+        <!--android:textColor="#FFFFFF"/>-->
+        <!---->
+        <!--<ImageButton-->
+        <!--android:id="@+id/expand_collapse"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="160dp"-->
+        <!--android:layout_gravity="right|bottom"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:padding="16dp"-->
+        <!--android:layout_weight="726" />-->
+
+        <!--</com.ms.square.android.expandabletextview.ExpandableTextView>-->
+
+        <!--</ScrollView>-->
+
+    </RelativeLayout>
+
+
+</LinearLayout>

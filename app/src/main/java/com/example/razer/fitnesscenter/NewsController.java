@@ -55,6 +55,14 @@ public class NewsController extends AppCompatActivity{
     private StringRequest stringRequest;
     private String url = "http://boundlessfitnesscenter.com/app/news.php?token=kvein1321032mkd21324";
 
+
+    //Makes sure when u press back show settings
+    @Override
+    protected void onResume() {
+        super.onResume();
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.itemNews);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

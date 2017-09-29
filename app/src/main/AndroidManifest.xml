@@ -25,6 +25,9 @@
             android:parentActivityName=".NewsController">
         </activity>
         <activity android:name=".AboutController"/>
+        <activity android:name=".VideoController"/>
+        <activity android:name=".VideoSingleController"
+            android:parentActivityName=".VideoController"/>
     </application>
 
 

@@ -20,6 +20,14 @@ import java.util.Map;
 
 public class BarcodeController extends AppCompatActivity {
 
+    //Makes sure when u press back show settings
+    @Override
+    protected void onResume() {
+        super.onResume();
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.itemBarcode);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
