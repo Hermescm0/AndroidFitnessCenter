@@ -37,6 +37,9 @@ public class BarcodeController extends AppCompatActivity {
                     case R.id.itemNews:
                         intent = new Intent(BarcodeController.this, NewsController.class);
                         break;
+                    case R.id.itemSettings:
+                        intent = new Intent(BarcodeController.this, AboutController.class);
+                        break;
 
 
                 }

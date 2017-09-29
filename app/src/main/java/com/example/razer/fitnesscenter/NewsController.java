@@ -63,6 +63,7 @@ public class NewsController extends AppCompatActivity{
         sendRequestandPrintRespond();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setSelectedItemId(R.id.itemNews);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -71,7 +72,9 @@ public class NewsController extends AppCompatActivity{
                     case R.id.itemBarcode:
                         intent = new Intent(NewsController.this, BarcodeController.class);
                         break;
-
+                    case R.id.itemSettings:
+                        intent = new Intent(NewsController.this, AboutController.class);
+                        break;
 
                 }
 

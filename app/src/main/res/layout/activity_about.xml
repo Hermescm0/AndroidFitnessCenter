@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guy">
+
+
+    <android.support.design.widget.BottomNavigationView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/navigation"
+        app:menu="@menu/bottom_navigation_main"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        >
+
+
+    </android.support.design.widget.BottomNavigationView>
+
+
+    <TextView
+        android:id="@+id/general_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/sign_out_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F37223"
+
+        android:textColor="#FFFFFF"
+        android:elevation="1dp"
+        android:text="Sign Out"
+        android:textAllCaps="false" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/support_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F37223"
+        android:text="Support"
+
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/legal_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Legal"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/privacy_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F37223"
+        android:text="Privacy"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false" />
+
+</LinearLayout>

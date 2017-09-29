@@ -24,6 +24,7 @@
         <activity android:name=".NewsSingleController"
             android:parentActivityName=".NewsController">
         </activity>
+        <activity android:name=".AboutController"/>
     </application>
 
 

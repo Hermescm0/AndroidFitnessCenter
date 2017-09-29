@@ -13,4 +13,9 @@
         android:title="Barcode"
         android:enabled="true"
         android:icon="@drawable/ic_view_column_black_48dp"/>
- </menu>
+    <item android:id="@+id/itemSettings"
+        android:title="Settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_manage"/>
+
+</menu>
