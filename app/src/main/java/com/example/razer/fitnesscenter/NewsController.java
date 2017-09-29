@@ -10,13 +10,16 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -37,6 +40,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.Buffer;
 import java.util.ArrayList;
+
+import static com.example.razer.fitnesscenter.R.id.imageView;
 
 
 public class NewsController extends AppCompatActivity{
@@ -79,7 +84,7 @@ public class NewsController extends AppCompatActivity{
 
 
 
-        BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.navigation);
+
     }
 
     private void sendRequestandPrintRespond() {

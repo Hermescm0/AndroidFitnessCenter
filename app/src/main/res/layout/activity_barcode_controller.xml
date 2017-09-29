@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/navigation"
         app:menu="@menu/bottom_navigation_main"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:background="#FFFFFF">
 
 
@@ -34,9 +34,9 @@
         android:id="@+id/imageView3"
         android:layout_width="100dp"
         android:layout_height="160dp"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
+        android:layout_below="@id/navigation"
+        android:layout_marginTop="10dp"
         android:scaleType="fitXY"
         design:srcCompat="@drawable/b1" />
 
