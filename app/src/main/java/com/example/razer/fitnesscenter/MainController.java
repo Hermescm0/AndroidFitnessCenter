@@ -1,6 +1,7 @@
 package com.example.razer.fitnesscenter;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,8 @@ public class MainController extends AppCompatActivity {
             public void onClick(View v) {
                 Intent MyIntent = new Intent(MainController.this, NewsController.class);
                 startActivity(MyIntent);
+                finish(); //Block back button
+
             }
         });
 

@@ -8,6 +8,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +18,24 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.w3c.dom.Text;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.Buffer;
 import java.util.ArrayList;
 
 
@@ -28,16 +45,17 @@ public class NewsController extends AppCompatActivity{
 
     ListView listView;
 
+    private RequestQueue mRequestQueue;
+
+    private StringRequest stringRequest;
+    private String url = "http://boundlessfitnesscenter.com/app/news.php?token=kvein1321032mkd21324";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        // Agrega una noticia
-        news.add(new NewsModel("Miles de estudiantes estarán presentes este evento 2016", "Esta es una prueba de la primera noticia. Todo va saliendo bien. Mas palabras para que se vea mas contenido.", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
-        news.add(new NewsModel("Excelente evento", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 29th, 2017"));
-        news.add(new NewsModel("Usando Roboto Thin", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 30th, 2017"));
-        news.add(new NewsModel("Noticia", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
+        sendRequestandPrintRespond();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -59,13 +77,56 @@ public class NewsController extends AppCompatActivity{
             }
         });
 
-        listView = (ListView) findViewById(R.id.news_list);
-        CustomAdapter customAdapter = new CustomAdapter();
-        listView.setAdapter(customAdapter);
 
 
         BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.navigation);
     }
+
+    private void sendRequestandPrintRespond() {
+        mRequestQueue = Volley.newRequestQueue(this);
+        stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject json = new JSONObject(response);
+                    JSONArray newsJson = json.getJSONArray("News");
+                    for(int i = 0; i < newsJson.length(); i++){
+
+                        JSONObject jsonNew = newsJson.getJSONObject(i);
+                        String title = jsonNew.getString("title");
+                        String content = jsonNew.getString("message");
+                        String url = jsonNew.getString("image");
+                        String date = jsonNew.getString("date");
+
+                        news.add(new NewsModel(title, content, url, date));
+
+                    }
+                    listView = (ListView) findViewById(R.id.news_list);
+                    CustomAdapter customAdapter = new CustomAdapter();
+                    listView.setAdapter(customAdapter);
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.i("a",error.getMessage());
+            }
+        }
+        );
+        stringRequest.setTag("request");
+        mRequestQueue.add(stringRequest);
+    }
+
+    protected void onStop(){
+        super.onStop();
+        if(mRequestQueue!=null){
+            mRequestQueue.cancelAll("request");
+        }
+    }
+
     class CustomAdapter extends BaseAdapter {
         @Override
         public int getCount() {

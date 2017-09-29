@@ -53,7 +53,7 @@ public class BarcodeController extends AppCompatActivity {
         ImageView barcode = (ImageView) findViewById(R.id.image_barcode);
 
         // barcode data
-        String barcode_data = "kevin";
+        String barcode_data = "inactive"; //18113410440
 
         // barcode image
         Bitmap bitmap = null;
@@ -62,6 +62,7 @@ public class BarcodeController extends AppCompatActivity {
 
             bitmap = encodeAsBitmap(barcode_data, BarcodeFormat.CODE_128, 600, 300);
             barcode.setImageBitmap(bitmap);
+
 
         } catch (WriterException e) {
             e.printStackTrace();

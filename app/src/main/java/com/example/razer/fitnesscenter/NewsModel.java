@@ -14,7 +14,7 @@ public class NewsModel {
     public NewsModel(String t, String c, String url, String date){
         this.title = t;
         this.content = c;
-        this.imageURL = url;
+        this.imageURL = "http://www.boundlessfitnesscenter.com/image/" + url + ".png";
         this.date = date;
     }
 }
