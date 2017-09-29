@@ -39,7 +39,25 @@ public class NewsController extends AppCompatActivity{
         news.add(new NewsModel("Usando Roboto Thin", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 30th, 2017"));
         news.add(new NewsModel("Noticia", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
 
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent = null;
+                switch (item.getItemId()){
+                    case R.id.itemBarcode:
+                        intent = new Intent(NewsController.this, BarcodeController.class);
+                        break;
 
+
+                }
+
+                if(intent != null){
+                    startActivity(intent);
+                }
+                return true;
+            }
+        });
 
         listView = (ListView) findViewById(R.id.news_list);
         CustomAdapter customAdapter = new CustomAdapter();

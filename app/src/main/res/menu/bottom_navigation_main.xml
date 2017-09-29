@@ -3,11 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/itemNews"
         android:title="News"
-        android:icon="@drawable/ic_email_black_48dp"/>
+        android:icon="@drawable/ic_email_black_48dp"
+        android:enabled="true"/>
     <item android:id="@+id/itemVideos"
         android:title="Videos"
+        android:enabled="true"
         android:icon="@drawable/ic_play_circle_filled_black_48dp"/>
     <item android:id="@+id/itemBarcode"
         android:title="Barcode"
+        android:enabled="true"
         android:icon="@drawable/ic_view_column_black_48dp"/>
  </menu>

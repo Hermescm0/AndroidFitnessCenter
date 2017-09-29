@@ -44,5 +44,6 @@ public class NewsSingleController extends AppCompatActivity {
         textDate.setText(date);
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         Picasso.with(getApplicationContext()).load(url).placeholder(R.drawable.guy).error(R.drawable.guy).into(imageView);
+
     }
 }
