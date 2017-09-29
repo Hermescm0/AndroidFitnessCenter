@@ -35,8 +35,8 @@ public class NewsController extends AppCompatActivity{
 
         // Agrega una noticia
         news.add(new NewsModel("Miles de estudiantes estarán presentes este evento 2016", "Esta es una prueba de la primera noticia. Todo va saliendo bien. Mas palabras para que se vea mas contenido.", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
-        news.add(new NewsModel("Excelente evento", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
-        news.add(new NewsModel("Usando Roboto Thin", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
+        news.add(new NewsModel("Excelente evento", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 29th, 2017"));
+        news.add(new NewsModel("Usando Roboto Thin", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 30th, 2017"));
         news.add(new NewsModel("Noticia", "Que hermosa noticia", "http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg","September 28th, 2017"));
 
 
@@ -70,22 +70,26 @@ public class NewsController extends AppCompatActivity{
             ImageView imageView = (ImageView) view.findViewById(R.id.news_image);
             TextView textView_title = (TextView) view.findViewById(R.id.news_title);
             TextView textView_content = (TextView) view.findViewById(R.id.news_content);
+            TextView textView_date = (TextView) view.findViewById(R.id.news_date);
+            TextView textView_image = (TextView) view.findViewById(R.id.news_image_url);
+
             Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Thin.ttf");
             textView_title.setTypeface(myFont);
 
             TextView textBackground = (TextView) view.findViewById(R.id.text_background);
             textBackground.getBackground().setAlpha(60);
 
-            Picasso.with(getApplicationContext()).load(news.get(i).imageURL).into(imageView);
+            Picasso.with(getApplicationContext()).load(news.get(i).imageURL).placeholder(R.drawable.guy).into(imageView);
             textView_title.setText(news.get(i).title);
             textView_content.setText(news.get(i).content);
+            textView_date.setText(news.get(i).date);
+            textView_image.setText(news.get(i).imageURL);
             view.setOnClickListener(new View.OnClickListener() {
 
 
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(NewsController.this, NewsSingleController.class);
-
 
                     TextView textTitle = (TextView) v.findViewById(R.id.news_title);
                     String title = textTitle.getText().toString();
@@ -95,6 +99,14 @@ public class NewsController extends AppCompatActivity{
                     String content = textContent.getText().toString();
                     intent.putExtra("content",content);
 
+                    TextView dateContent = (TextView) v.findViewById(R.id.news_date);
+                    String date = dateContent.getText().toString();
+                    intent.putExtra("date",date);
+
+
+                    TextView imageContent = (TextView) v.findViewById(R.id.news_image_url);
+                    String image = imageContent.getText().toString();
+                    intent.putExtra("image",image);
 
                     startActivity(intent);
                 }

@@ -29,6 +29,8 @@ public class NewsSingleController extends AppCompatActivity {
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
         String content = intent.getStringExtra("content");
+        String date = intent.getStringExtra("date");
+        String url = intent.getStringExtra("image");
         TextView textTitle = (TextView) findViewById(R.id.textTitle);
 
 
@@ -38,7 +40,9 @@ public class NewsSingleController extends AppCompatActivity {
 
         textContent.setTypeface(myFont);
 
+        TextView textDate = (TextView) findViewById(R.id.textDate);
+        textDate.setText(date);
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
-        Picasso.with(getApplicationContext()).load("http://www.vip-polymers.com/wp-content/uploads/2015/03/news.jpg").error(R.drawable.guy).into(imageView);
+        Picasso.with(getApplicationContext()).load(url).placeholder(R.drawable.guy).error(R.drawable.guy).into(imageView);
     }
 }
