@@ -190,6 +190,7 @@ public class NewsController extends AppCompatActivity{
                     startActivity(intent);
                 }
             });
+
             return view;
 
         }
