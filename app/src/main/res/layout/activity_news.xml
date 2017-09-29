@@ -27,8 +27,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/navigation"
         app:menu="@menu/bottom_navigation_main"
-        android:layout_alignParentBottom="true"
-        android:background="#FFFFFF">
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        >
 
 
     </android.support.design.widget.BottomNavigationView>

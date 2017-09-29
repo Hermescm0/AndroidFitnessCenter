@@ -1,16 +1,20 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="300dp"
     android:layout_gravity="top"
     android:layout_margin="0dp"
-    android:background="#010101">
+    app:cardBackgroundColor="#252525">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_gravity="top"
-        android:background="@color/cardview_light_background">
+        android:background="#010101"
+        android:layout_marginBottom="20dp"
+        android:elevation="20dp"
+        >
 
 
         <ImageView
